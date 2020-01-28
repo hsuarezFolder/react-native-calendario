@@ -23,6 +23,7 @@ const EmptyMonth = React.memo<EmptyMonthType>(
       ]}
     >
       <Text
+        allowFontScaling={false}    
         style={[
           { fontSize: 25, fontWeight: '300' },
           props.theme.emptyMonthTextStyle,
@@ -43,7 +44,7 @@ const WeekColumn = React.memo<WeekColumnType>(
     <View
       style={[{ flex: 1, alignItems: 'center' }, props.theme.weekColumnStyle]}
     >
-      <Text allowFontScaling={false} style={props.theme.weekColumnTextStyle}>
+      <Text allowFontScaling={false} allowFontScaling={false} style={props.theme.weekColumnTextStyle}>
         {props.day}
       </Text>
     </View>
@@ -70,7 +71,7 @@ type MonthTitleType = { name: string, theme: ThemeType };
 
 const MonthTitle = React.memo<MonthTitleType>(
   (props: MonthTitleType) => (
-    <Text
+    <Text allowFontScaling={false}    
       allowFontScaling={false}
       style={[
         { textAlign: 'center', paddingVertical: 10 },
