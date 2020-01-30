@@ -55,7 +55,7 @@ const NonTouchableDay = React.memo<NonTouchableDayPropsType>(
         ]}
       >
         <Text
-          allowFontScaling={false}    
+          maxFontSizeMultiplier={1}    
           style={[
             { color: '#d3d3d3' },
             theme.nonTouchableDayTextStyle,
@@ -140,7 +140,7 @@ const Day = React.memo<PropsType>(
           props.renderDayContent(props.item)
         ) : (
           <Text
-            allowFontScaling={false}    
+            maxFontSizeMultiplier={1}
             style={[
               { color: isActive ? 'white' : 'black' },
               theme.dayTextStyle,
