@@ -1,6 +1,6 @@
 /* @flow */
 import * as React from 'react';
-import { FlatList } from 'react-native';
+import { FlatList, Platform } from 'react-native';
 import moment from 'moment';
 
 import Month from './Month';
@@ -19,7 +19,7 @@ type StateType = {
 };
 
 const NUMBER_OF_MONTHS = 12;
-const MONTH_HEIGHT = 470;
+const MONTH_HEIGHT = Platform.OS === 'ios' ? 370 : 470;
 
 const DIFF_VISIBLE = 1;
 

@@ -1,7 +1,7 @@
 /* @flow */
 /* eslint-disable react/no-unused-prop-types */
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Platform } from 'react-native';
 import moment from 'moment';
 import Day from '../Day';
 import { getDayNames, isValidDate } from '../../utils/date';
@@ -170,7 +170,7 @@ export default React.memo<Props>(
     }
 
     return (
-      <View style={{ height: 300 }}>
+      <View style={{ height: Platform.OS === 'ios' ? 300 : 370 }}>
         {showMonthTitle && <MonthTitle name={name} theme={theme} />}
         {showWeekdays && <WeekColumns days={DAY_NAMES} theme={theme} />}
         {weeks.map((week: DayType[], index: number) => (
