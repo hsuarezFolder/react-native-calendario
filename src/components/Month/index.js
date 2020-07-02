@@ -17,7 +17,7 @@ const EmptyMonth = React.memo<EmptyMonthType>(
         {
           height: props.height,
           justifyContent: 'center',
-          alignItems: 'center',
+          alignItems: 'center'
         },
         props.theme.emptyMonthContainerStyle,
       ]}
@@ -170,7 +170,7 @@ export default React.memo<Props>(
     }
 
     return (
-      <View style={{ height }}>
+      <View style={{ height: 300 }}>
         {showMonthTitle && <MonthTitle name={name} theme={theme} />}
         {showWeekdays && <WeekColumns days={DAY_NAMES} theme={theme} />}
         {weeks.map((week: DayType[], index: number) => (

@@ -13,16 +13,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     flex: 1,
+    //height: 40,
+    //width: 40,
     marginVertical: 5,
     paddingVertical: 10,
   },
   endDate: {
     borderBottomRightRadius: 60,
     borderTopRightRadius: 60,
+    //borderRadius: 40
   },
   startDate: {
     borderBottomLeftRadius: 60,
     borderTopLeftRadius: 60,
+    //borderRadius: 40
   },
 });
 
@@ -128,7 +132,8 @@ const Day = React.memo<PropsType>(
           theme.dayContainerStyle,
           isToday && !isActive ? theme.todayContainerStyle : {},
           isActive ? styles.activeDate : {},
-          isActive ? theme.activeDayContainerStyle : {},
+          isActive && (isStartDate || isEndDate) ? theme.activeDayContainerStyle : {},
+          isActive && (!isStartDate && !isEndDate) ? theme.activeDayMiddleContainerStyle : {},
           isStartDate ? styles.startDate : {},
           isStartDate ? theme.startDateContainerStyle : {},
           isEndDate ? styles.endDate : {},

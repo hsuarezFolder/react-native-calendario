@@ -19,7 +19,7 @@ type StateType = {
 };
 
 const NUMBER_OF_MONTHS = 12;
-const MONTH_HEIGHT = 370;
+const MONTH_HEIGHT = 470;
 
 const DIFF_VISIBLE = 1;
 
